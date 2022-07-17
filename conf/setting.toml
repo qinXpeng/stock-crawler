@@ -1,0 +1,14 @@
+[main_conf]
+port="8987"
+
+[http_header]
+"cookie" = "device_id=9ef375eb00631888294a3a0ad2c3ba54; s=cr18pd0v16; bid=3d7f56512f3030b8082d4d72d08e3bdf_l5cld1br; xq_a_token=fb81acf5170aad073886d6f4710230100565c245; xqat=fb81acf5170aad073886d6f4710230100565c245; xq_r_token=7b20eba2d7f8fb7ff92d34226863aebb43cc1bfc; xq_id_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ1aWQiOi0xLCJpc3MiOiJ1YyIsImV4cCI6MTY2MDUyMDE1MywiY3RtIjoxNjU3OTgyNDI0NDg2LCJjaWQiOiJkOWQwbjRBWnVwIn0.RifT5d3OdauyEU9p5D1BcN566_HaOhN_HzeSKYySyS8LdXh2B61-pgR32lMqj4udnUOFxK7CvzoNwgfazY_sMwtfdxg31ZRBTbrVj9xHjrjdCjNT89TK7n7xHSCe_mI6u_VGeZIVB_AERiU6DcYX57uGDotUjq7uvaN8TtFkIB6BrF84zH8jUi23prSivutyDVox01n4Ma86hEC0NaUexMzJBgi8D2hDXP1B1L6eBo6j6yboZab1tfcrV7rtnFX52-NgO4LmjHW9ZU8DL9W6LJTDbpntq57C3eQgI7JcX7HfSiFBSdTj2D9tIvlDXRjiwffWmuAa9ACNezzObiuXAg; u=431657982444261; Hm_lvt_1db88642e346389874251b5a1eded6e3=1657292681,1657901164,1657952458,1657982444; is_overseas=0; Hm_lpvt_1db88642e346389874251b5a1eded6e3=1658067430"
+"sec-ch-ua" ="\".Not/A)Brand\";v=\"99\", \"Google Chrome\";v=\"103\", \"Chromium\";v=\"103\""
+"sec-ch-ua-mobile"="?0"
+"sec-ch-ua-platform" ="\"Windows\""
+"sec-fetch-dest"="document"
+"sec-fetch-mode"="navigate"
+"sec-fetch-site"="none"
+"sec-fetch-user"="?1"
+"upgrade-insecure-requests"="1"
+"user-agent"="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
