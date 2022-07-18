@@ -50,22 +50,22 @@ type ResponseHeaders struct {
 }
 
 type ResponseStockInfo struct {
-	Symbol             string `json:"symbol"`
-	Name               string `json:"name"`
-	Current            string `json:"current"`
-	Chg                string `json:"chg"`
-	Percent            string `json:"percent"`
-	CurrentYearPercent string `json:"current_year_percent"`
-	Volume             string `json:"volume"`
-	Amount             string `json:"amount"`
-	TurnoverRate       string `json:"turnover_rate"`
-	PeTtm              string `json:"pe_ttm"`
-	FloatMarketCapital string `json:"float_market_capital"`
-	MarketCapital      string `json:"market_capital"`
-	VolumeRatio        string `json:"volume_ratio"`
-	DividendYield      string `json:"dividend_yield"`
-	FloatShares        string `json:"float_shares"`
-	TotalShares        string `json:"total_shares"`
+	Symbol             string  `json:"symbol"`
+	Name               string  `json:"name"`
+	Current            float64 `json:"current"`
+	Chg                string  `json:"chg"`
+	Percent            string  `json:"percent"`
+	CurrentYearPercent string  `json:"current_year_percent"`
+	Volume             string  `json:"volume"`
+	Amount             string  `json:"amount"`
+	TurnoverRate       string  `json:"turnover_rate"`
+	PeTtm              string  `json:"pe_ttm"`
+	FloatMarketCapital string  `json:"float_market_capital"`
+	MarketCapital      string  `json:"market_capital"`
+	VolumeRatio        string  `json:"volume_ratio"`
+	DividendYield      string  `json:"dividend_yield"`
+	FloatShares        string  `json:"float_shares"`
+	TotalShares        string  `json:"total_shares"`
 }
 
 type PageResStockInfo struct {
@@ -84,10 +84,10 @@ current_year_percent 年初至今 %
 volume 成交量 万
 amount 成交额 亿
 turnover_rate换手率 %
-pe_ttm 市赢率 
+pe_ttm 市赢率
 float_market_capital 流通值 亿
 market_capital 总市值 亿
-volume_ratio 量比 
+volume_ratio 量比
 dividend_yield 股息率 %
 float_shares 流通股  亿
 total_shares 总股本 亿

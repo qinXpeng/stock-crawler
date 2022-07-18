@@ -24,7 +24,7 @@ func httpserver(port string) {
 	fmt.Println("listen port:", port)
 	app := gin.New()
 	app.Use(gin.Logger(), gin.Recovery())
-	app.GET("/stockserver/getpage", action.GetPage)
+	app.GET("/stockserver/getpage", action.GetPageAction)
 	app.Run(":" + port)
 
 }
