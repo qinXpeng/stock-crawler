@@ -1,0 +1,23 @@
+[servers]
+	[servers.Stock_HS]
+		url="https://xueqiu.com/service/v5/stock/screener/quote/list"
+		method="GET"
+	[servers.Stock_Industry]
+		url="https://xueqiu.com/stock/industry/stockList.json"
+		method="GET"
+	[servers.Stock_Quote]
+		url="https://stock.xueqiu.com/v5/stock/quote.json"
+		method="GET"
+	[servers.Stock_Kilne]
+		url="https://stock.xueqiu.com/v5/stock/chart/kline.json"
+		method="GET"
+	[servers.Stock_List]
+		url="https://stock.xueqiu.com/v5/stock/screener/quote/list.json"
+		method="GET"
+	[servers.EM_DATA_GET]
+		url = "https://datacenter-web.eastmoney.com/api/data/v1/get"
+		method="GET"
+
+[headers]
+	Cookie="device_id=9ef375eb00631888294a3a0ad2c3ba54; s=dg1c5uft6p; __utmz=1.1658549355.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); __utma=1.448382356.1658549355.1658572693.1658582057.4; xq_a_token=fb81acf5170aad073886d6f4710230100565c245; xqat=fb81acf5170aad073886d6f4710230100565c245; xq_r_token=7b20eba2d7f8fb7ff92d34226863aebb43cc1bfc; xq_id_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ1aWQiOi0xLCJpc3MiOiJ1YyIsImV4cCI6MTY2MDUyMDE1MywiY3RtIjoxNjU4NTkwNjIwNjI3LCJjaWQiOiJkOWQwbjRBWnVwIn0.qpnGy28Dy4PeD-worakPIqwdM_2GPRyyIwK8wrdRIv_nXaTIJXGnMAG5yFUiwHfRbaUEnsBpz5bCL6xvETthCradY8oCSsKyLvY20hcu_CAOO1gxf89nH7IWGweH84UWw02or96BxIQxVODnIwt-Dkx6DRYQAaCpudVOjSsFyY00KvkyX3L51buyWFkJuzQbnWYtKq6xVKEMYRxtC4hbKp_RFOgZQaB4gPTz_0TEbsJN5V0NZYt2XxngsBHa4NDvnyoEq5bcuHE5u6W7jPM8rCzD6bBVcbkicBaeWCA5qG-hmgcNt5CCwXTc1BgesviYTSr08AKoiB3dtypV2r_TMQ; u=981658590649766; Hm_lvt_1db88642e346389874251b5a1eded6e3=1658548794,1658590651; acw_tc=2760826016585926124365927ef06044e1cc87689c8dad41fae0ad61d8d77b; Hm_lpvt_1db88642e346389874251b5a1eded6e3=1658592634"
+	User-Agent="ozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"

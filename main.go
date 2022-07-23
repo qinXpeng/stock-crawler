@@ -10,6 +10,7 @@ import (
 
 func initConf() {
 	module.InitGlobalConf("./conf/setting.toml")
+	module.InitRegister("./conf/dowstream.toml")
 }
 
 func main() {
@@ -25,6 +26,7 @@ func httpserver(port string) {
 	app := gin.New()
 	app.Use(gin.Logger(), gin.Recovery())
 	app.GET("/stockserver/getpage", action.GetPageAction)
+	app.GET("/stockserver/getststock", action.GetSTstockAction)
 	app.Run(":" + port)
 
 }

@@ -8,6 +8,14 @@ type SetConfig struct {
 	MainConf   MainConf          `toml:"main_conf"`
 	HttpHeader map[string]string `toml:"http_header"`
 }
+type ServerConf struct {
+	Url    string `toml:"url"`
+	Method string `toml:"method"`
+}
+type RegisterConfig struct {
+	Servers map[string]ServerConf `toml:"servers"`
+	Headers map[string]string     `toml:"headers"`
+}
 
 type ResStockInfo struct {
 	Symbol             string  `json:"symbol"`
@@ -54,18 +62,18 @@ type ResponseStockInfo struct {
 	Name               string  `json:"name"`
 	Current            float64 `json:"current"`
 	Chg                string  `json:"chg"`
-	Percent            string  `json:"percent"`
-	CurrentYearPercent string  `json:"current_year_percent"`
-	Volume             string  `json:"volume"`
-	Amount             string  `json:"amount"`
-	TurnoverRate       string  `json:"turnover_rate"`
-	PeTtm              string  `json:"pe_ttm"`
-	FloatMarketCapital string  `json:"float_market_capital"`
-	MarketCapital      string  `json:"market_capital"`
-	VolumeRatio        string  `json:"volume_ratio"`
-	DividendYield      string  `json:"dividend_yield"`
-	FloatShares        string  `json:"float_shares"`
-	TotalShares        string  `json:"total_shares"`
+	Percent            float64 `json:"percent"`
+	CurrentYearPercent float64 `json:"current_year_percent"`
+	Volume             float64 `json:"volume"`
+	Amount             float64 `json:"amount"`
+	TurnoverRate       float64 `json:"turnover_rate"`
+	PeTtm              float64 `json:"pe_ttm"`
+	FloatMarketCapital float64 `json:"float_market_capital"`
+	MarketCapital      float64 `json:"market_capital"`
+	VolumeRatio        float64 `json:"volume_ratio"`
+	DividendYield      float64 `json:"dividend_yield"`
+	FloatShares        float64 `json:"float_shares"`
+	TotalShares        float64 `json:"total_shares"`
 }
 
 type PageResStockInfo struct {
