@@ -14,9 +14,9 @@ import (
 )
 
 func GetPageAction(ctx *gin.Context) {
-	tableDesert, err := getHSPage()
-	if err != nil {
-		ctx.JSON(http.StatusInternalServerError, err)
+	tableDesert := getStockDataAll()
+	if len(tableDesert) == 0 {
+		ctx.JSON(http.StatusInternalServerError, "empty")
 		return
 	}
 	ctx.JSON(http.StatusOK, reqMulti(tableDesert))
@@ -99,12 +99,12 @@ func reqMulti(desert []module.ResponseStockInfo) []module.PageResStockInfo {
 							lsi++
 						}
 					}
-					if i == 9 && (r[7] >= 8.0 || (r[7] >= 4.0 && strings.Index(desert[s.index].Name, "ST") != -1)) {
+					if i == len(rd.Data.Item)-1 && (r[7] >= 8.0 || (r[7] >= 4.0 && strings.Index(desert[s.index].Name, "ST") != -1)) {
 						today = append(today, desert[s.index])
 					}
 				}
 				if cnt >= 2 {
-					if cnt <= 3 && lsi != cnt {
+					if cnt <= 3 && lsi != cnt && len(rd.Data.Item) >= 5{
 						continue
 					}
 					id := cnt - 2
@@ -170,9 +170,23 @@ func isHSstock(symbol string) bool {
 	return symbol[3] == '0' && (symbol[2] == '0' || symbol[2] == '6')
 }
 
-func getHSPage() ([]module.ResponseStockInfo, error) {
+func getStockDataAll() []module.ResponseStockInfo {
+	par_desc := "page=1&size=200&order=desc&orderby=percent&order_by=percent&market=CN&type=sh_sz"
+	par_asc := "page=1&size=200&order=asc&orderby=percent&order_by=percent&market=CN&type=sh_sz"
+	var tableDesert []module.ResponseStockInfo
+	s1, err := getHSPage(par_desc)
+	if err == nil {
+		tableDesert = append(tableDesert, s1...)
+	}
+	s2, err := getHSPage(par_asc)
+	if err == nil {
+		tableDesert = append(tableDesert, s2...)
+	}
+	return tableDesert
+}
+
+func getHSPage(params string) ([]module.ResponseStockInfo, error) {
 	baseUrl := module.GlobalRegister.Servers["Stock_HS"].Url
-	params := "page=1&size=200&order=desc&orderby=percent&order_by=percent&market=CN&type=sh_sz"
 	reqUrl := baseUrl + "?" + params
 	b, err := module.HttpGet(reqUrl)
 	if err != nil {
